@@ -15,6 +15,12 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
+- task: Blazaco
+  script: |
+    md ..\SirJson
+    cd ..\SirJson
+    git clone https://github.com/sharninja/Blazaco
+
 - task: NuGetToolInstaller@1
 
 - task: NuGetCommand@2
