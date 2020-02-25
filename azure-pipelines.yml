@@ -16,7 +16,7 @@ variables:
 
 steps:
 - task: Blazaco
-  script: |
+  powershell: |
     md ..\SirJson
     cd ..\SirJson
     git clone https://github.com/sharninja/Blazaco
