@@ -15,7 +15,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: Blazaco
+- task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
