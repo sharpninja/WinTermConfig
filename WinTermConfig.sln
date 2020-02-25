@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{76D2F917-17D5-44E2-9C7B-B90630BB74A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPS.WinTermConfig.UI", "src\GPS.WinTermConfig.UI\GPS.WinTermConfig.UI.csproj", "{54D84A46-147C-4AED-A446-7E4A9032EC50}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3rdParty", "3rdParty", "{08688462-FA32-464F-8854-18B032D9E023}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Blazaco", "..\SirJson\Blazaco\src\Blazaco\Blazaco.csproj", "{EFF86121-0F88-48B4-A285-55E218265489}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|x64.Build.0 = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Debug|x86.Build.0 = Debug|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|x64.ActiveCfg = Release|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|x64.Build.0 = Release|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|x86.ActiveCfg = Release|Any CPU
+		{54D84A46-147C-4AED-A446-7E4A9032EC50}.Release|x86.Build.0 = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|x64.Build.0 = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Debug|x86.Build.0 = Debug|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|x64.ActiveCfg = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|x64.Build.0 = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|x86.ActiveCfg = Release|Any CPU
+		{EFF86121-0F88-48B4-A285-55E218265489}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54D84A46-147C-4AED-A446-7E4A9032EC50} = {76D2F917-17D5-44E2-9C7B-B90630BB74A6}
+		{EFF86121-0F88-48B4-A285-55E218265489} = {08688462-FA32-464F-8854-18B032D9E023}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8D5ABE1-7478-475D-BBE2-AA91AB505BBF}
+	EndGlobalSection
+EndGlobal
