@@ -16,10 +16,12 @@ variables:
 
 steps:
 - task: Blazaco
-  powershell: |
-    md ..\SirJson
-    cd ..\SirJson
-    git clone https://github.com/sharninja/Blazaco
+  inputs:
+    targetType: 'inline'
+    script: |
+      md ..\SirJson
+      cd ..\SirJson
+      git clone https://github.com/sharninja/Blazaco
 
 - task: NuGetToolInstaller@1
 
