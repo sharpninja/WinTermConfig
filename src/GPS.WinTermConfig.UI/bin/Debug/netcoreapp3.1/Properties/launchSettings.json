@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "GPS.WinTermConfig.UI": {
-      "commandName": "Project",
-      "commandLineArgs": "--edge-webview-switches=\"--auto-open-devtools-for-tabs\""
-    }
-  }
-}
