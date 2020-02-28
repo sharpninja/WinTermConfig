@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using Blazaco.Editor;
-using Blazaco.Editor.Options;
 using GPS.WinTermConfig.UI.Common;
+using GPS.WinTermConfig.UI.Editor;
+using GPS.WinTermConfig.UI.Editor.Options;
+using GPS.WinTermConfig.UI.Shared;
 using Microsoft.AspNetCore.Components;
 
 namespace GPS.WinTermConfig.UI.Pages
@@ -28,24 +29,31 @@ namespace GPS.WinTermConfig.UI.Pages
             }
         }
 
+        protected override async void OnAfterRender(bool firstRender) { 
+            base.OnAfterRender(firstRender);
+            await Editor.Layout();
+        }
+
         protected override void OnInitialized()
         {
             var settingsJson = File.ReadAllText(ViewModel.Filename);
 
-            _editorModel = new EditorModel(new EditorOptions()
-            {
-                Value = settingsJson,
-                Language = "json",
-                Theme = "vs-dark",
-                Minimap = new MinimapOptions()
+            _editorModel = new EditorModel(
+                new EditorOptions()
                 {
-                    Enabled = false
-                }
-            }, new EditorLayoutInfo()
-            {
-                Width = 500,
-                Height = 500,
-            });
+                    Value = settingsJson,
+                    Language = "json",
+                    Theme = "vs-dark",
+                    Minimap = new MinimapOptions()
+                    {
+                        Enabled = false
+                    }
+                },
+                new EditorLayoutInfo()
+                {
+                    Width = "Auto",
+                    Height = "Auto",
+                });
 
             base.OnInitialized();
         }

@@ -2,12 +2,13 @@
 
 <div class="jumbotron-fluid">
     <h2>Windows Terminal Configuration</h2>
-    <EditForm Model="ViewModel">
-        <fieldset>
-            <label for="fileName" 5>Filename</label>
-            <InputText class="form-control form-control-sm small" id="fileName" @bind-Value="ViewModel.Filename" />
-
-            <MonacoEditor @ref="Editor" Model="@_editorModel" Width="500" Height="500" />
-        </fieldset>
-    </EditForm>
 </div>
+<EditForm Model="ViewModel" class="fullscreen">
+    <fieldset class="fullscreen tg5 px-4">
+        <label for="fileName" 5>Filename</label>
+        <InputText class="form-control form-control-sm small" id="fileName" @bind-Value="ViewModel.Filename" />
+        <div class="tg6 fullscreen">
+            <MonacoEditor @ref="Editor" Model="@_editorModel" class="monaco-full-screen" />
+        </div>
+    </fieldset>
+</EditForm>

@@ -7,8 +7,20 @@ window.Blazaco.Editor = {
         if (window.Blazaco.Editors.find(e => e.id === model.id)) {
             return false;
         } else {
+            window.CurrentEditor = thisEditor;
             window.Blazaco.Editors.push({ id: model.id, editor: thisEditor });
+
+            window.onresize = () => window.CurrentEditor.layout();
         }
+        return true;
+    },
+    UpdateOptions: function(id, editorOptions) {
+        const myEditor = window.Blazaco.Editors.find(e => e.id === id);
+        if (!myEditor) {
+            throw `Could not find a editor with id: '${window.Blazaco.Editors.length}' '${id}'`;
+        }
+        window.CurrentEditor = myEditor;
+        window.CurrentEditor.editor.updateOptions(editorOptions);
         return true;
     },
     GetValue: function (id) {
@@ -16,14 +28,16 @@ window.Blazaco.Editor = {
         if (!myEditor) {
             throw `Could not find a editor with id: '${window.Blazaco.Editors.length}' '${id}'`;
         }
-        return myEditor.editor.getValue();
+        window.CurrentEditor = myEditor;
+        return window.CurrentEditor.editor.getValue();
     },
     SetValue: function (id, value) {
         const myEditor = window.Blazaco.Editors.find(e => e.id === id);
         if (!myEditor) {
             throw `Could not find a editor with id: '${window.Blazaco.Editors.length}' '${id}'`;
         }
-        myEditor.editor.setValue(value);
+        window.CurrentEditor = myEditor;
+        window.CurrentEditor.editor.setValue(value);
         return true;
     },
     SetTheme: function (id, theme) {
@@ -31,7 +45,8 @@ window.Blazaco.Editor = {
         if (!myEditor) {
             throw `Could not find a editor with id: '${window.Blazaco.Editors.length}' '${id}'`;
         }
-        monaco.editor.setTheme(theme);
+        window.CurrentEditor = myEditor;
+        window.CurrentEditor.editor.setTheme(theme);
         return true;
     },
     Layout: function (id, layoutInfo) {
@@ -39,7 +54,8 @@ window.Blazaco.Editor = {
         if (!myEditor) {
             throw `Could not find a editor with id: '${window.Blazaco.Editors.length}' '${id}'`;
         }
-        monaco.editor.layout(layoutInfo);
+        window.CurrentEditor = myEditor;
+        window.CurrentEditor.editor.layout(layoutInfo);
         return true;
     }
 };
